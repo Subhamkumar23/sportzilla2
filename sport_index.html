@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		
+		
+	</style>
+</head>
+<body id="container">
+    
+    <div>
+	  <button class="btn">Logout</button>
+      <button id="Rules" onclick="openStoryline()">Rules</button>
+    </div>
+    
+    <div class="room">
+    	<a href="">Room 1</a><br>
+    	<a href="">Room 2</a><br>
+    	<a href="">Room 3</a><br>
+    	<a href="">Room 4</a>
+    </div>
+   
+    <div id="input-field">
+    	<h1>Create new room:</h1>
+    	<input type="text"  id="room-name" placeholder="Name of the room"><br><br>
+    	<input type="submit"  value="Go" id="submit-button">
+    </div>
+   
+    <!-- Following section displays the rule --> 
+    <!-- <div id="rule-image">
+    	<img src="scroll.jpeg" id="image">
+        
+    	<button class="close"  type="button"  >
+			     <span class="cross">&times;</span>
+		</button>
+    </div> -->
+
+
+     <div id="storyline">
+        <span class="storyline-corner-one"></span>
+        <span class="storyline-corner-two"></span>
+        
+        <div class="storyline-inner">
+          
+          <button class="close"  type="button" onclick="closeStoryline()" >
+                 <span class="cross">&times;</span>
+          </button>
+
+          <div id="story-content-wrapper">
+            <div id="para1">
+              
+                In the above example, it seems that instance initializer block is firstly invoked but NO. Instance intializer block is invoked at the time of object creation. The java compiler copies the instance initializer block in the constructor after the first statement super().
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+    
+
+    <script type="text/javascript">
+    	// var x = document.getElementById('rule-image');
+
+     //    function popup(){
+    	//     x.style.display = "block";
+    	//     x.style.animation = "incoming 1s";
+    	// }
+
+    	// $("button.close").click(function() {
+ 
+        
+     //       $("#rule-image").fadeOut(1000);
+               
+     //    });
+
+     //    $("#container").click(function(event) {
+             
+     //         if (event.target == x) {
+     //         	$("#rule-image").fadeOut(1000);
+     //         }
+     //    });
+
+
+        function openStoryline() {
+          document.getElementById('storyline').style.display = 'block';
+          setTimeout("document.getElementById('storyline').setAttribute('class','hover');", 100);
+        }
+        function closeStoryline() {
+          document.getElementById('storyline').removeAttribute('class');
+          setTimeout("document.getElementById('storyline').style.display='none';", 1000);
+        }
+    </script>
+</body>
+</html>
